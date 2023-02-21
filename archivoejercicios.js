@@ -7,11 +7,15 @@ function businessHours() {
     return (hour >= 9 && hour < 16) ? true : false;
 }
 
+// Descomentar y agregar valor en caso de no querer tomar la hora de la pc
+
 //console.log(businessHours());
 
 function businessDay() {
     return (day >= 5) ? true : false;
 }
+
+// Descomentar y agregar valor en caso de no querer tomar el dia de la pc
 
 //console.log(businessDay());
 
@@ -38,8 +42,6 @@ countTrue([]) ➞ 0
  */
 // Regresar 0 si el array es vacio
 // Usar recursion
-
-
 
 
 // Declaramos un arreglo con valores booleanos
@@ -96,7 +98,17 @@ console.log(mcd(48, 3));
 // ***Encontrar los primeros n elementos de la serie fibonacci***
 // Usar recursion
 
-
+function fibonacci(n) {
+    if (n === 1) {
+      return [0, 1];
+    } else {
+      let serie = fibonacci(n - 1);
+      serie.push(serie[serie.length - 1] + serie[serie.length - 2]);
+      return serie;
+    }
+  }
+  
+  console.log(fibonacci(10));
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -108,18 +120,11 @@ console.log(mcd(48, 3));
 // (nivel) -> cantidad de numeritos
 
 
+function numeroPiramidalTriangular(nivel) {
+    return (nivel * (nivel + 1) * (nivel + 2)) / 6;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+  console.log(numeroPiramidalTriangular(4));
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
